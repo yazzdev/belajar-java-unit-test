@@ -1,14 +1,20 @@
 package dyaz.io.unit.test;
 
+import dyaz.io.unit.test.generator.SimpleDisplayNameGenerator;
+import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
+// @DisplayName("Testing For Class Calculator")
+@DisplayNameGeneration(SimpleDisplayNameGenerator.class)
 public class CalculatorTest {
 
   private Calculator calculator = new Calculator();
 
   @Test
+  //@DisplayName("Testing Success method add(integer, integer)")
   public void testAddSuccess() {
     var result = calculator.add(10, 10);
     // Using assertions
