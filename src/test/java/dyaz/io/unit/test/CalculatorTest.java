@@ -2,6 +2,7 @@ package dyaz.io.unit.test;
 
 import dyaz.io.unit.test.generator.SimpleDisplayNameGenerator;
 import org.junit.jupiter.api.*;
+import org.opentest4j.TestAbortedException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -58,6 +59,15 @@ public class CalculatorTest {
   @Disabled
   public void testComingSoon(){
     // Testing for future
+  }
+
+  @Test
+  public void testAborted(){
+    // For cancel testing
+    var profile = System.getenv("PROFILE");
+    if (!"DEV".equals(profile)) {
+      throw new TestAbortedException("[Test Aborted] -> not DEV");
+    }
   }
 
 }
