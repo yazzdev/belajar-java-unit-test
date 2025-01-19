@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: dyaz.io.unit.test.CalculatorTest
+Test set: dyaz.io.unit.test.ConditionTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.062 s - in dyaz.io.unit.test.CalculatorTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0.003 s - in dyaz.io.unit.test.ConditionTest

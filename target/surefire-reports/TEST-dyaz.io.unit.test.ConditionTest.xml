@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="dyaz.io.unit.test.CalculatorTest" time="0.062" tests="6" errors="0" skipped="3" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="dyaz.io.unit.test.ConditionTest" time="0.003" tests="11" errors="0" skipped="6" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -56,28 +56,27 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testAborted" classname="dyaz.io.unit.test.CalculatorTest" time="0">
-    <skipped message="[Test Aborted] -&gt; not DEV" type="org.opentest4j.TestAbortedException">org.opentest4j.TestAbortedException: [Test Aborted] -> not DEV
-	at dyaz.io.unit.test.CalculatorTest.testAborted(CalculatorTest.java:70)
-</skipped>
-    <system-out><![CDATA[Before All Testing!
-After All Testing!
-Before Each Testing!
-After Each Testing!
-]]></system-out>
+  <testcase name="testOnlyOnWindows" classname="dyaz.io.unit.test.ConditionTest" time="0"/>
+  <testcase name="testEnabledOnJava11to17" classname="dyaz.io.unit.test.ConditionTest" time="0"/>
+  <testcase name="testDisabledOnJavaVendorOracle" classname="dyaz.io.unit.test.ConditionTest" time="0">
+    <skipped message="System property [java.vendor] with value [Oracle Corporation] matches regular expression [Oracle Corporation]"/>
   </testcase>
-  <testcase name="testDivideFailed" classname="dyaz.io.unit.test.CalculatorTest" time="0.004"/>
-  <testcase name="testAddSuccess" classname="dyaz.io.unit.test.CalculatorTest" time="0.002"/>
-  <testcase name="testComingSoon" classname="dyaz.io.unit.test.CalculatorTest" time="0">
-    <skipped message="public void dyaz.io.unit.test.CalculatorTest.testComingSoon() is @Disabled"/>
+  <testcase name="testSystemProperties" classname="dyaz.io.unit.test.ConditionTest" time="0">
+    <skipped message="void dyaz.io.unit.test.ConditionTest.testSystemProperties() is @Disabled"/>
   </testcase>
-  <testcase name="testAssumptions" classname="dyaz.io.unit.test.CalculatorTest" time="0">
-    <skipped message="Assumption failed: assumption is not true" type="org.opentest4j.TestAbortedException">org.opentest4j.TestAbortedException: Assumption failed: assumption is not true
-	at dyaz.io.unit.test.CalculatorTest.testAssumptions(CalculatorTest.java:79)
-</skipped>
-    <system-out><![CDATA[Before Each Testing!
-After Each Testing!
-]]></system-out>
+  <testcase name="testDisableOnWindows" classname="dyaz.io.unit.test.ConditionTest" time="0">
+    <skipped message="Disabled on operating system: Windows 11"/>
   </testcase>
-  <testcase name="testDivideSuccess" classname="dyaz.io.unit.test.CalculatorTest" time="0.001"/>
+  <testcase name="testEnabledOnProfileDev" classname="dyaz.io.unit.test.ConditionTest" time="0">
+    <skipped message="Environment variable [PROFILE] does not exist"/>
+  </testcase>
+  <testcase name="testDisabledOnJava8" classname="dyaz.io.unit.test.ConditionTest" time="0"/>
+  <testcase name="testEnabledOnJavaVendorOracle" classname="dyaz.io.unit.test.ConditionTest" time="0"/>
+  <testcase name="testDisabledOnJava11to17" classname="dyaz.io.unit.test.ConditionTest" time="0">
+    <skipped message="Disabled on JRE version: 17.0.9"/>
+  </testcase>
+  <testcase name="testEnabledOnJava8" classname="dyaz.io.unit.test.ConditionTest" time="0">
+    <skipped message="Disabled on JRE version: 17.0.9"/>
+  </testcase>
+  <testcase name="testDisabledOnProfileDev" classname="dyaz.io.unit.test.ConditionTest" time="0"/>
 </testsuite>
